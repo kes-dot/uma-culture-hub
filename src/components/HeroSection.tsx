@@ -1,7 +1,7 @@
 import { ArrowDown, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-culture.jpg";
+import heroImage from "@/assets/training-summit.jpg";
 
 const HeroSection = () => {
   const scrollToValues = () => {
