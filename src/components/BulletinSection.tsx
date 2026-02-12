@@ -1,5 +1,7 @@
 import { Newspaper, Calendar, Award, Heart, Star, ArrowRight, Download, BookOpen, Sun, Sparkles, Users, GraduationCap } from "lucide-react";
 import teamCelebration from "@/assets/team-celebration.jpg";
+import newsletterJan from "@/assets/newsletter-jan-2026.jpg";
+import newsletterAug from "@/assets/newsletter-aug-2025.jpg";
 
 const bulletinItems = [
   {
@@ -35,6 +37,7 @@ const newsletterArchive = [
     downloadUrl: "/newsletters/january-2026.pdf",
     color: "primary",
     icon: Sparkles,
+    image: newsletterJan,
     highlights: [
       "Mental Wellness Month — resources & self-care tips",
       "National Mentoring Month celebrations & mentor spotlights",
@@ -49,6 +52,7 @@ const newsletterArchive = [
     downloadUrl: "/newsletters/august-2025.pdf",
     color: "secondary",
     icon: Sun,
+    image: newsletterAug,
     highlights: [
       "Summer team socials & celebration recaps",
       "Back-to-school transition support for families",
@@ -162,44 +166,31 @@ const BulletinSection = () => {
                 key={issue.month}
                 className="bg-card rounded-2xl border border-border/50 shadow-card hover-lift overflow-hidden"
               >
-                {/* Card header */}
-                <div
-                  className={`px-6 py-4 flex items-center justify-between ${
-                    issue.color === "primary"
-                      ? "bg-primary/5 border-b border-primary/10"
-                      : "bg-secondary/5 border-b border-secondary/10"
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div
-                      className={`w-9 h-9 rounded-lg flex items-center justify-center ${
-                        issue.color === "primary"
-                          ? "bg-primary/10 text-primary"
-                          : "bg-secondary/10 text-secondary"
-                      }`}
-                    >
-                      <issue.icon className="h-4 w-4" />
-                    </div>
+                {/* Cover image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={issue.image}
+                    alt={`${issue.month} BFF Bulletin`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
                     <div>
-                      <span className="font-bold text-foreground text-sm">
+                      <span className="font-bold text-primary-foreground text-lg">
                         {issue.month} {issue.emoji}
                       </span>
-                      <span className="block text-xs text-muted-foreground">BFF Bulletin</span>
+                      <span className="block text-xs text-primary-foreground/70">BFF Bulletin</span>
                     </div>
+                    <a
+                      href={issue.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-background/90 text-foreground hover:bg-background transition-colors backdrop-blur-sm"
+                    >
+                      <Download className="h-3 w-3" />
+                      PDF
+                    </a>
                   </div>
-                  <a
-                    href={issue.downloadUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${
-                      issue.color === "primary"
-                        ? "bg-primary/10 text-primary hover:bg-primary/20"
-                        : "bg-secondary/10 text-secondary hover:bg-secondary/20"
-                    }`}
-                  >
-                    <Download className="h-3 w-3" />
-                    PDF
-                  </a>
                 </div>
 
                 {/* Key highlights */}
