@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Father and child at Behavior Frontiers"
+          alt="Clinician working with child at Behavior Frontiers"
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
