@@ -1,4 +1,5 @@
 import { Newspaper, Calendar, Award, Heart, Star, ArrowRight, Download, BookOpen, Sun, Sparkles, Users, GraduationCap } from "lucide-react";
+import { Link } from "react-router-dom";
 import teamCelebration from "@/assets/team-celebration.jpg";
 import newsletterJan from "@/assets/newsletter-jan-2026.jpg";
 import newsletterAug from "@/assets/newsletter-aug-2025.jpg";
@@ -98,14 +99,12 @@ const BulletinSection = () => {
               <p className="text-primary-foreground/80 mb-4">
                 New beginnings, mentoring month celebrations, mental wellness focus, and incredible team momentum as we kick off the year.
               </p>
-              <a
-                href={`${import.meta.env.BASE_URL}newsletters/january-2026.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/bulletin/january-2026"
                 className="flex items-center gap-2 text-secondary font-semibold text-sm cursor-pointer group-hover:gap-3 transition-all"
               >
                 Read Full Bulletin <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
 
