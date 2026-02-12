@@ -34,12 +34,12 @@ const CareerPathways = () => {
     <section id="careers" className="py-24 gradient-warm">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">Career Growth</span>
+          <span className="text-sm font-semibold text-primary uppercase tracking-wider">Grow With Us</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
-            Your Path to Clinical Leadership
+            We Invest in Your Career — Every Step
           </h2>
           <p className="text-muted-foreground text-lg">
-            From your first day to leading a team — we invest in every step of your journey.
+            Clear pathways, real mentorship, and a culture that champions your professional growth from day one.
           </p>
         </div>
 

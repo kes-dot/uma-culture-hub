@@ -52,12 +52,12 @@ const ValuesSection = () => {
     <section id="values" className="py-24 bg-muted/50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Culture & Core Values</span>
+          <span className="text-sm font-semibold text-primary uppercase tracking-wider">What We Stand For</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
-            Built on Purpose. Powered by People.
+            The Values Our People Live Every Day.
           </h2>
           <p className="text-muted-foreground text-lg">
-            Every value we hold drives the gold-standard care we deliver and the community we build.
+            These aren't words on a wall — they're how our 2,100+ team members show up for each other and the families we serve.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ const ValuesSection = () => {
         {/* Quote */}
         <div className="mt-16 text-center gradient-warm rounded-2xl p-10 border border-primary/10">
           <blockquote className="text-xl sm:text-2xl font-semibold text-foreground italic max-w-3xl mx-auto">
-            "We don't just provide care. We build careers. We build community. We build futures."
+            "We don't just hire employees. We welcome family. We celebrate people. We grow together."
           </blockquote>
         </div>
       </div>

@@ -37,10 +37,13 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Employee Stories</span>
+          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Our People</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
-            Hear From the Team Behind the Impact.
+            Real Stories from Real Team Members.
           </h2>
+          <p className="text-muted-foreground text-lg">
+            The people who make BF special, in their own words.
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">

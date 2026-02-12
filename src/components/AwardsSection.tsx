@@ -1,10 +1,10 @@
 import { Trophy, MapPin, FlaskConical, TrendingUp } from "lucide-react";
 
 const milestones = [
-  { icon: Trophy, number: "15+", label: "Years of Clinical Excellence", description: "Pioneering gold-standard ABA care since our founding" },
-  { icon: MapPin, number: "30+", label: "Locations Nationwide", description: "Growing our reach to serve more families across the country" },
-  { icon: FlaskConical, number: "100+", label: "Research Contributions", description: "Advancing behavioral science through Priorare and clinical studies" },
-  { icon: TrendingUp, number: "1000+", label: "Team Members Strong", description: "A growing family of dedicated clinicians and support staff" },
+  { icon: Trophy, number: "20+", label: "Years Empowering People", description: "Building careers and transforming lives since 2004" },
+  { icon: MapPin, number: "60+", label: "Locations Across 12 States", description: "A nationwide community where you can grow close to home" },
+  { icon: FlaskConical, number: "2,600+", label: "Families We Serve Together", description: "The impact our team creates every single day" },
+  { icon: TrendingUp, number: "2,100+", label: "Team Members & Growing", description: "Clinicians, leaders, and support staff — all part of the BF family" },
 ];
 
 const AwardsSection = () => {
@@ -12,12 +12,12 @@ const AwardsSection = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Awards & Milestones</span>
+          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">By the Numbers</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
-            A Legacy of Impact
+            The Community You'd Be Joining
           </h2>
           <p className="text-muted-foreground text-lg">
-            Milestones that reflect our commitment to excellence, growth, and meaningful change.
+            Real numbers that reflect a real commitment to our people and the families we serve.
           </p>
         </div>
 
