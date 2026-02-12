@@ -14,8 +14,8 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Clinician working with child at Behavior Frontiers"
-          className="w-full h-full object-cover object-center"
+          alt="Behavior Frontiers team member at company retreat"
+          className="w-full h-full object-cover object-[center_65%]"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
