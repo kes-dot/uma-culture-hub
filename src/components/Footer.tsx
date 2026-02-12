@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
+import bfLogoWhite from "@/assets/bf-logo-white.png";
 
 const Footer = () => {
   return (
@@ -7,12 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg gradient-hero flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">BF</span>
-              </div>
-              <span className="font-bold text-lg text-primary-foreground">Behavior Frontiers</span>
-            </div>
+            <img src={bfLogoWhite} alt="Behavior Frontiers" className="h-16 w-auto mb-4" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
               Gold-standard ABA care through research, collaboration, and heart. Building careers, community, and futures.
             </p>

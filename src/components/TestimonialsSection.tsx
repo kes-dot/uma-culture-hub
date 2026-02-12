@@ -1,30 +1,27 @@
 import { useState } from "react";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import testimonial1 from "@/assets/testimonial-1.jpg";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const testimonials = [
   {
     quote: "The mentorship I received here transformed my career. I started as a Behavior Technician and now I'm leading a team of clinicians. The growth opportunities are truly unmatched.",
-    name: "Sarah Martinez",
+    name: "Sarah M.",
     role: "Clinical Supervisor",
     years: "5 years at BF",
-    image: testimonial1,
+    initials: "SM",
   },
   {
     quote: "What sets Behavior Frontiers apart is how genuinely they invest in your development. The CEU summits, the hands-on training — every day I'm learning something that makes me a better clinician.",
-    name: "James Chen",
+    name: "James C.",
     role: "Senior Behavior Technician",
     years: "3 years at BF",
-    image: testimonial2,
+    initials: "JC",
   },
   {
     quote: "I've never worked somewhere that celebrates its team the way BF does. From the BFF Bulletin shoutouts to the community events, you truly feel like you belong to something special.",
-    name: "Aisha Johnson",
+    name: "Aisha J.",
     role: "Board Certified Behavior Analyst",
     years: "4 years at BF",
-    image: testimonial3,
+    initials: "AJ",
   },
 ];
 
@@ -52,11 +49,9 @@ const TestimonialsSection = () => {
 
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-28 h-28 rounded-2xl object-cover shadow-card"
-                />
+                <div className="w-24 h-24 rounded-2xl gradient-hero flex items-center justify-center shadow-card">
+                  <span className="text-2xl font-bold text-primary-foreground">{t.initials}</span>
+                </div>
               </div>
 
               <div className="flex-1 text-center md:text-left">
