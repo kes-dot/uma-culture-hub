@@ -1,4 +1,4 @@
-import { Newspaper, Calendar, Award, Heart, Star, ArrowRight } from "lucide-react";
+import { Newspaper, Calendar, Award, Heart, Star, ArrowRight, Download, BookOpen, Sun, Sparkles, Users, GraduationCap } from "lucide-react";
 import teamCelebration from "@/assets/team-celebration.jpg";
 
 const bulletinItems = [
@@ -6,22 +6,56 @@ const bulletinItems = [
     icon: Heart,
     category: "Mental Wellness Month",
     title: "Take Care of Yourself",
-    description: "January is Mental Wellness Month. Remember: progress over perfection. Stay connected with your team and reach out when you need support.",
+    description:
+      "January is Mental Wellness Month. Remember: progress over perfection. Stay connected with your team and reach out when you need support. Your Employee Assistance Program offers 24/7 confidential mental health coverage.",
     color: "secondary",
   },
   {
     icon: Star,
     category: "National Mentoring Month",
     title: "Celebrating Our Mentors",
-    description: "Shoutout to the incredible mentors who guide our team every day. Your dedication to growing the next generation of clinicians inspires us all.",
+    description:
+      "Shoutout to the incredible mentors who guide our team every day. Whether you're a BCBA guiding a new technician or a seasoned RBT showing the ropes, your dedication to growing the next generation of clinicians inspires us all.",
     color: "primary",
   },
   {
     icon: Award,
     category: "Recognition Spotlight",
     title: "Team Member of the Month",
-    description: "Congratulations to our amazing team members who went above and beyond this month. Your compassion and clinical excellence make all the difference.",
+    description:
+      "Congratulations to our amazing team members who went above and beyond this month. Your compassion, clinical excellence, and commitment to our families make all the difference every single day.",
     color: "secondary",
+  },
+];
+
+const newsletterArchive = [
+  {
+    month: "January 2026",
+    emoji: "💙",
+    downloadUrl: "/newsletters/january-2026-bff-bulletin.pdf",
+    color: "primary",
+    icon: Sparkles,
+    highlights: [
+      "Mental Wellness Month — resources & self-care tips",
+      "National Mentoring Month celebrations & mentor spotlights",
+      "Team Member of the Month recognition",
+      "New Year goals and team momentum kick-off",
+      "Employee Assistance Program wellness reminders",
+    ],
+  },
+  {
+    month: "August 2025",
+    emoji: "🎉",
+    downloadUrl: "/newsletters/august-2025-bff-bulletin.pdf",
+    color: "secondary",
+    icon: Sun,
+    highlights: [
+      "Summer team socials & celebration recaps",
+      "Back-to-school transition support for families",
+      "Employee appreciation week highlights",
+      "New hire welcome spotlights across regions",
+      "Career growth stories & promotion announcements",
+    ],
   },
 ];
 
@@ -30,7 +64,9 @@ const BulletinSection = () => {
     <section id="bulletin" className="py-24 bg-muted/50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">BFF Bulletin</span>
+          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+            BFF Bulletin
+          </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
             Celebrating Our People, Every Day.
           </h2>
@@ -58,9 +94,14 @@ const BulletinSection = () => {
               <p className="text-primary-foreground/80 mb-4">
                 New beginnings, mentoring month celebrations, mental wellness focus, and incredible team momentum as we kick off the year.
               </p>
-              <div className="flex items-center gap-2 text-secondary font-semibold text-sm cursor-pointer group-hover:gap-3 transition-all">
+              <a
+                href="/newsletters/january-2026-bff-bulletin.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-secondary font-semibold text-sm cursor-pointer group-hover:gap-3 transition-all"
+              >
                 Read Full Bulletin <ArrowRight className="h-4 w-4" />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -73,31 +114,114 @@ const BulletinSection = () => {
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    item.color === "primary" ? "bg-primary/10 text-primary" : "bg-secondary/10 text-secondary"
-                  }`}>
+                  <div
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                      item.color === "primary"
+                        ? "bg-primary/10 text-primary"
+                        : "bg-secondary/10 text-secondary"
+                    }`}
+                  >
                     <item.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <span className={`text-xs font-semibold uppercase tracking-wider ${
-                      item.color === "primary" ? "text-primary" : "text-secondary"
-                    }`}>
+                    <span
+                      className={`text-xs font-semibold uppercase tracking-wider ${
+                        item.color === "primary" ? "text-primary" : "text-secondary"
+                      }`}
+                    >
                       {item.category}
                     </span>
                     <h4 className="text-lg font-bold text-foreground mt-1 mb-2">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
 
-            <div className="bg-card rounded-xl p-6 border border-border/50 shadow-card flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-semibold text-foreground">Newsletter Archive</span>
-              </div>
-              <ArrowRight className="h-5 w-5 text-muted-foreground" />
+        {/* Newsletter Archive */}
+        <div className="mt-16">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <BookOpen className="h-5 w-5 text-primary" />
             </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Newsletter Archive</h3>
+              <p className="text-sm text-muted-foreground">
+                Catch up on past issues — download and revisit the highlights.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {newsletterArchive.map((issue) => (
+              <div
+                key={issue.month}
+                className="bg-card rounded-2xl border border-border/50 shadow-card hover-lift overflow-hidden"
+              >
+                {/* Card header */}
+                <div
+                  className={`px-6 py-4 flex items-center justify-between ${
+                    issue.color === "primary"
+                      ? "bg-primary/5 border-b border-primary/10"
+                      : "bg-secondary/5 border-b border-secondary/10"
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-9 h-9 rounded-lg flex items-center justify-center ${
+                        issue.color === "primary"
+                          ? "bg-primary/10 text-primary"
+                          : "bg-secondary/10 text-secondary"
+                      }`}
+                    >
+                      <issue.icon className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <span className="font-bold text-foreground text-sm">
+                        {issue.month} {issue.emoji}
+                      </span>
+                      <span className="block text-xs text-muted-foreground">BFF Bulletin</span>
+                    </div>
+                  </div>
+                  <a
+                    href={issue.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${
+                      issue.color === "primary"
+                        ? "bg-primary/10 text-primary hover:bg-primary/20"
+                        : "bg-secondary/10 text-secondary hover:bg-secondary/20"
+                    }`}
+                  >
+                    <Download className="h-3 w-3" />
+                    PDF
+                  </a>
+                </div>
+
+                {/* Key highlights */}
+                <div className="px-6 py-5">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3 block">
+                    Key Highlights
+                  </span>
+                  <ul className="space-y-2.5">
+                    {issue.highlights.map((highlight) => (
+                      <li key={highlight} className="flex items-start gap-2.5 text-sm">
+                        <span
+                          className={`mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0 ${
+                            issue.color === "primary" ? "bg-primary" : "bg-secondary"
+                          }`}
+                        />
+                        <span className="text-muted-foreground">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
