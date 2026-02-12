@@ -50,9 +50,9 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="outline" size="sm" asChild>
-            <a href="https://behaviorfrontiers.com/employment" target="_blank" rel="noopener noreferrer">
+            <Link to="/careers">
               View Open Roles
-            </a>
+            </Link>
           </Button>
         </div>
 
@@ -77,9 +77,9 @@ const Header = () => {
             </Link>
           ))}
           <Button className="w-full mt-3" size="sm" asChild>
-            <a href="https://behaviorfrontiers.com/employment" target="_blank" rel="noopener noreferrer">
+            <Link to="/careers">
               View Open Roles
-            </a>
+            </Link>
           </Button>
         </div>
       )}
