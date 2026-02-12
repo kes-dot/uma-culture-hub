@@ -24,8 +24,9 @@ const HeroSection = () => {
       <div className="relative container mx-auto px-6 py-32">
         <div className="max-w-xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in">
-            This Is Where You{" "}
-            <span className="text-secondary">Belong.</span>
+            This Is Where
+            <br />
+            <span className="text-secondary">You Belong.</span>
           </h1>
 
           <p className="text-lg text-primary-foreground/80 mb-10 max-w-md animate-fade-in" style={{ animationDelay: "0.15s" }}>
