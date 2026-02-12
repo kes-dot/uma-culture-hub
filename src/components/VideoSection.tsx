@@ -18,10 +18,10 @@ const VideoSection = () => {
             <span className="text-xs font-semibold text-primary">Culture & Values</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            See What Makes BF <span className="text-gradient">Different.</span>
+            Our Culture in <span className="text-gradient">Action.</span>
           </h2>
           <p className="text-muted-foreground">
-            Hear directly from our leadership and team about the values, mission, and culture that make Behavior Frontiers a place where clinicians thrive.
+            See the people, passion, and purpose behind Behavior Frontiers — straight from our team and leadership.
           </p>
         </div>
 

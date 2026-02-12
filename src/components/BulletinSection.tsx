@@ -32,10 +32,10 @@ const BulletinSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">BFF Bulletin</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
-            Stay Connected. Stay Inspired.
+            Celebrating Our People, Every Day.
           </h2>
           <p className="text-muted-foreground text-lg">
-            The latest from our community — celebrations, milestones, and stories that bring us together.
+            Shoutouts, milestones, wellness spotlights, and the stories that make our community feel like home.
           </p>
         </div>
 
