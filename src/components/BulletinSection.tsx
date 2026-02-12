@@ -32,7 +32,7 @@ const newsletterArchive = [
   {
     month: "January 2026",
     emoji: "💙",
-    downloadUrl: "/newsletters/january-2026-bff-bulletin.pdf",
+    downloadUrl: "/newsletters/january-2026.pdf",
     color: "primary",
     icon: Sparkles,
     highlights: [
@@ -46,7 +46,7 @@ const newsletterArchive = [
   {
     month: "August 2025",
     emoji: "🎉",
-    downloadUrl: "/newsletters/august-2025-bff-bulletin.pdf",
+    downloadUrl: "/newsletters/august-2025.pdf",
     color: "secondary",
     icon: Sun,
     highlights: [
@@ -95,7 +95,7 @@ const BulletinSection = () => {
                 New beginnings, mentoring month celebrations, mental wellness focus, and incredible team momentum as we kick off the year.
               </p>
               <a
-                href="/newsletters/january-2026-bff-bulletin.pdf"
+                href="/newsletters/january-2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-secondary font-semibold text-sm cursor-pointer group-hover:gap-3 transition-all"
