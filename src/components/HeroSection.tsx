@@ -8,35 +8,30 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Behavior Frontiers team working with children"
+          alt="Father and child at Behavior Frontiers"
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
       </div>
 
       <div className="relative container mx-auto px-6 py-32">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse-soft" />
-            <span className="text-sm font-medium text-primary-foreground/90">Life at Behavior Frontiers</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
+        <div className="max-w-xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in">
             Where Compassion Meets{" "}
             <span className="text-secondary">Clinical Excellence.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-primary-foreground/80 mb-10 max-w-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <p className="text-lg text-primary-foreground/80 mb-10 max-w-md animate-fade-in" style={{ animationDelay: "0.15s" }}>
             Join a team redefining gold-standard ABA care through research, collaboration, and heart.
           </p>
 
-          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.45s" }}>
+          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button
               size="lg"
               onClick={scrollToValues}
@@ -56,20 +51,6 @@ const HeroSection = () => {
                 View Open Roles
               </a>
             </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="flex flex-wrap gap-8 mt-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            {[
-              { number: "15+", label: "Years of Excellence" },
-              { number: "1000+", label: "Team Members" },
-              { number: "30+", label: "Locations Nationwide" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-3xl font-bold text-primary-foreground">{stat.number}</div>
-                <div className="text-sm text-primary-foreground/60">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
