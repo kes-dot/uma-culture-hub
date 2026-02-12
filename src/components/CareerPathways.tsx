@@ -1,4 +1,5 @@
 import { ArrowRight, GraduationCap, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const steps = [
@@ -77,10 +78,10 @@ const CareerPathways = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" className="gradient-hero border-0 text-primary-foreground font-semibold shadow-elevated hover:opacity-90 transition-opacity" asChild>
-            <a href="https://behaviorfrontiers.com/employment" target="_blank" rel="noopener noreferrer">
+            <Link to="/careers">
               <GraduationCap className="mr-2 h-5 w-5" />
               Start Your Journey
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

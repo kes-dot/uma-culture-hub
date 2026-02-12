@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <Link to="/" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Culture & Values</Link>
               <Link to="/mission" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Our Journey</Link>
-              <a href="https://behaviorfrontiers.com/employment" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Open Roles</a>
+              <Link to="/careers" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Open Roles</Link>
               <a href="https://behaviorfrontiers.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">Main Website</a>
             </div>
           </div>

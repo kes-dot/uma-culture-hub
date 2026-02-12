@@ -1,4 +1,5 @@
 import { ArrowDown, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-culture.jpg";
 
@@ -46,10 +47,10 @@ const HeroSection = () => {
               className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 font-semibold px-8 backdrop-blur-sm"
               asChild
             >
-              <a href="https://behaviorfrontiers.com/employment" target="_blank" rel="noopener noreferrer">
+              <Link to="/careers">
                 <Briefcase className="mr-2 h-4 w-4" />
                 View Open Roles
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
