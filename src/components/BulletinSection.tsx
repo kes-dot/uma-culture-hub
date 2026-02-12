@@ -34,7 +34,7 @@ const newsletterArchive = [
   {
     month: "January 2026",
     emoji: "💙",
-    downloadUrl: "/newsletters/january-2026.pdf",
+    downloadUrl: `${import.meta.env.BASE_URL}newsletters/january-2026.pdf`,
     color: "primary",
     icon: Sparkles,
     image: newsletterJan,
@@ -49,7 +49,7 @@ const newsletterArchive = [
   {
     month: "August 2025",
     emoji: "🎉",
-    downloadUrl: "/newsletters/august-2025.pdf",
+    downloadUrl: `${import.meta.env.BASE_URL}newsletters/august-2025.pdf`,
     color: "secondary",
     icon: Sun,
     image: newsletterAug,
@@ -99,7 +99,7 @@ const BulletinSection = () => {
                 New beginnings, mentoring month celebrations, mental wellness focus, and incredible team momentum as we kick off the year.
               </p>
               <a
-                href="/newsletters/january-2026.pdf"
+                href={`${import.meta.env.BASE_URL}newsletters/january-2026.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-secondary font-semibold text-sm cursor-pointer group-hover:gap-3 transition-all"
