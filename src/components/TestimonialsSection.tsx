@@ -1,48 +1,29 @@
 import { useState } from "react";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
-
-const testimonials = [
-  {
-    quote: "The mentorship I received here transformed my career. I started as a Behavior Technician and now I'm leading a team of clinicians. The growth opportunities are truly unmatched.",
-    name: "Sarah M.",
-    role: "Clinical Supervisor",
-    years: "5 years at BF",
-    initials: "SM",
-  },
-  {
-    quote: "What sets Behavior Frontiers apart is how genuinely they invest in your development. The CEU summits, the hands-on training — every day I'm learning something that makes me a better clinician.",
-    name: "James C.",
-    role: "Senior Behavior Technician",
-    years: "3 years at BF",
-    initials: "JC",
-  },
-  {
-    quote: "I've never worked somewhere that celebrates its team the way BF does. From the BFF Bulletin shoutouts to the community events, you truly feel like you belong to something special.",
-    name: "Aisha J.",
-    role: "Board Certified Behavior Analyst",
-    years: "4 years at BF",
-    initials: "AJ",
-  },
-];
+import { brandConfig } from "@/config/brandConfig";
 
 const TestimonialsSection = () => {
+  const { testimonials } = brandConfig;
+  const items = testimonials.items;
   const [current, setCurrent] = useState(0);
 
-  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
-  const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
+  const next = () => setCurrent((c) => (c + 1) % items.length);
+  const prev = () => setCurrent((c) => (c - 1 + items.length) % items.length);
 
-  const t = testimonials[current];
+  if (items.length === 0) return null;
+
+  const t = items[current];
 
   return (
     <section id="testimonials" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">Our People</span>
+          <span className="text-sm font-semibold text-secondary uppercase tracking-wider">{testimonials.badge}</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-3 mb-4">
-            Real Stories from Real Team Members.
+            {testimonials.heading}
           </h2>
           <p className="text-muted-foreground text-lg">
-            The people who make BF special, in their own words.
+            {testimonials.subheading}
           </p>
         </div>
 
@@ -80,7 +61,7 @@ const TestimonialsSection = () => {
               </button>
 
               <div className="flex gap-2">
-                {testimonials.map((_, i) => (
+                {items.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrent(i)}

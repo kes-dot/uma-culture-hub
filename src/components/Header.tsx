@@ -2,15 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import bfLogo from "@/assets/bf-logo-color.png";
-
-const navLinks = [
-  { label: "Culture", href: "/#values" },
-  { label: "Testimonials", href: "/#testimonials" },
-  { label: "BFF Bulletin", href: "/#bulletin" },
-  { label: "Growth", href: "/#careers" },
-  { label: "Our Journey", href: "/mission" },
-];
+import { brandConfig } from "@/config/brandConfig";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,11 +24,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <img src={bfLogo} alt="Behavior Frontiers" className="h-12 w-auto" />
+          <img src={brandConfig.assets.logoColor} alt={brandConfig.company.name} className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
+          {brandConfig.nav.links.map((link) => (
             <Link
               key={link.label}
               to={link.href.startsWith("/#") ? "/" : link.href}
@@ -50,8 +42,8 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="outline" size="sm" asChild>
-            <Link to="/careers">
-              View Open Roles
+            <Link to={brandConfig.nav.ctaHref}>
+              {brandConfig.nav.ctaLabel}
             </Link>
           </Button>
         </div>
@@ -66,7 +58,7 @@ const Header = () => {
 
       {mobileOpen && (
         <div className="md:hidden bg-card border-b border-border px-6 py-4 animate-fade-in">
-          {navLinks.map((link) => (
+          {brandConfig.nav.links.map((link) => (
             <Link
               key={link.label}
               to={link.href.startsWith("/#") ? "/" : link.href}
@@ -77,8 +69,8 @@ const Header = () => {
             </Link>
           ))}
           <Button className="w-full mt-3" size="sm" asChild>
-            <Link to="/careers">
-              View Open Roles
+            <Link to={brandConfig.nav.ctaHref}>
+              {brandConfig.nav.ctaLabel}
             </Link>
           </Button>
         </div>
