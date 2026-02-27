@@ -1,10 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+/*
+ * ============================================================
+ * REBRANDING: FONTS
+ * ============================================================
+ * Replace the Google Fonts import below with your brand's font.
+ * Then update the font-family declarations in the @layer base
+ * block AND in tailwind.config.ts → theme.extend.fontFamily.
+ * ============================================================
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /*
+   * ============================================================
+   * REBRANDING: COLORS
+   * ============================================================
+   * All colors below are HSL values (without the hsl() wrapper).
+   * Change --primary, --secondary, and --accent to match your
+   * brand palette. The rest will follow automatically.
+   * ============================================================
+   */
   :root {
     --background: 200 20% 98%;
     --foreground: 207 50% 12%;
@@ -15,9 +33,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 207 50% 12%;
 
+    /* PRIMARY: Your main brand color */
     --primary: 202 100% 37%;
     --primary-foreground: 0 0% 100%;
 
+    /* SECONDARY: Your accent / CTA color */
     --secondary: 145 100% 35%;
     --secondary-foreground: 0 0% 100%;
 
@@ -45,7 +65,7 @@
     --sidebar-border: 200 20% 90%;
     --sidebar-ring: 202 100% 37%;
 
-    /* Custom tokens */
+    /* Custom tokens — update these to match --primary/--secondary */
     --gradient-hero: linear-gradient(135deg, hsl(202 100% 37%) 0%, hsl(145 100% 35%) 100%);
     --gradient-warm: linear-gradient(135deg, hsl(202 100% 37% / 0.08) 0%, hsl(145 100% 35% / 0.08) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(200 20% 97%) 100%);
@@ -92,11 +112,12 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Montserrat', sans-serif;
+    /* REBRANDING: Update this to match the Google Fonts import above */
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 }
 

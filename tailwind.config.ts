@@ -1,3 +1,11 @@
+/**
+ * ============================================================
+ * REBRANDING: FONT FAMILY
+ * ============================================================
+ * Update the fontFamily.sans array below to match your
+ * Google Fonts import in src/index.css.
+ * ============================================================
+ */
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,7 +22,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+        /* REBRANDING: Change this to your brand font */
+        sans: ["Inter", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
