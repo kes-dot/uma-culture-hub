@@ -2,61 +2,74 @@ export interface JobListing {
   id: string;
   title: string;
   department: string;
-  city: string;
-  state: string;
-  region: string;
+  location: string;
+  type: string;
   applyUrl: string;
 }
 
-// Categorize role titles into departments
-// Customize this function for your company's department structure
-function getDepartment(title: string): string {
-  const t = title.toLowerCase();
-  if (t.includes("engineer") || t.includes("developer")) return "Engineering";
-  if (t.includes("designer") || t.includes("ux")) return "Design";
-  if (t.includes("manager") || t.includes("director")) return "Management";
-  if (t.includes("sales") || t.includes("account")) return "Sales";
-  if (t.includes("marketing")) return "Marketing";
-  if (t.includes("support") || t.includes("success")) return "Customer Success";
-  return "General";
-}
-
-function getRegion(state: string): string {
-  const west = ["California", "Colorado", "Washington", "Oregon"];
-  const south = ["Texas", "Georgia", "Virginia", "Florida"];
-  const northeast = ["Massachusetts", "Pennsylvania", "Maryland", "New York"];
-  const midwest = ["Minnesota", "Missouri", "Michigan", "Illinois"];
-  if (west.includes(state)) return "West";
-  if (south.includes(state)) return "South";
-  if (northeast.includes(state)) return "Northeast";
-  if (midwest.includes(state)) return "Midwest";
-  return "Other";
-}
-
-/**
- * Populate this array with your job listings.
- *
- * Example:
- * {
- *   id: "job-001",
- *   title: "Software Engineer",
- *   city: "San Francisco",
- *   state: "California",
- *   applyUrl: "https://your-ats.com/apply/job-001",
- * }
- */
 export const jobListings: JobListing[] = [
-  // Add your job listings here
-].map((job: Omit<JobListing, "department" | "region"> & { department?: string; region?: string }) => ({
-  ...job,
-  department: job.department || getDepartment(job.title),
-  region: job.region || getRegion(job.state),
-}));
-
-export function getUniqueStates(): string[] {
-  return [...new Set(jobListings.map((j) => j.state))].sort();
-}
-
-export function getUniqueDepartments(): string[] {
-  return [...new Set(jobListings.map((j) => j.department))].sort();
-}
+  {
+    id: "1",
+    title: "Admissions Representative",
+    department: "Admissions",
+    location: "Remote",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/4412936008",
+  },
+  {
+    id: "2",
+    title: "Student Finance Advisor",
+    department: "Student Finance",
+    location: "Remote",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/4413204008",
+  },
+  {
+    id: "3",
+    title: "Learner Services Advisor",
+    department: "Student Success",
+    location: "Remote",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/4413196008",
+  },
+  {
+    id: "4",
+    title: "Career Services Advisor",
+    department: "Career Services",
+    location: "Remote",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/4413133008",
+  },
+  {
+    id: "5",
+    title: "Business Development Advisor",
+    department: "Business Development",
+    location: "Remote",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/4413181008",
+  },
+  {
+    id: "6",
+    title: "Campus Education Manager",
+    department: "Academic Operations",
+    location: "Clearwater, FL",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/5115660008",
+  },
+  {
+    id: "7",
+    title: "Adjunct Instructor",
+    department: "Academic",
+    location: "Remote",
+    type: "Part-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/4508554008",
+  },
+  {
+    id: "8",
+    title: "Manager, Career Services",
+    department: "Career Services",
+    location: "Remote",
+    type: "Full-time",
+    applyUrl: "https://job-boards.greenhouse.io/umaeducationinc/jobs/5117510008",
+  },
+];

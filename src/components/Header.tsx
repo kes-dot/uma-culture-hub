@@ -4,31 +4,44 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { brandConfig } from "@/config/brandConfig";
 
+const navLinks = [
+  { label: "Culture", href: "/#values" },
+  { label: "Our Leaders", href: "/#leaders" },
+  { label: "Bulletin", href: "/#bulletin" },
+  { label: "Careers", href: "/careers" },
+  { label: "Our Journey", href: "/mission" },
+];
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
   const scrollToSection = (href: string) => {
     setMobileOpen(false);
-    if (href.startsWith("/#")) {
+    if (href.startsWith("/#") && location.pathname === "/") {
       const id = href.replace("/#", "");
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
-        return;
       }
     }
   };
 
+  const logoSrc = brandConfig.images.logoWhite || brandConfig.images.logo;
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <img src={brandConfig.assets.logoColor} alt={brandConfig.company.name} className="h-12 w-auto" />
+          <img
+            src={logoSrc}
+            alt={brandConfig.company.name}
+            className={`${brandConfig.images.navLogoHeight} w-auto`}
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
-          {brandConfig.nav.links.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.label}
               to={link.href.startsWith("/#") ? "/" : link.href}
@@ -41,16 +54,19 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="outline" size="sm" asChild>
-            <Link to={brandConfig.nav.ctaHref}>
-              {brandConfig.nav.ctaLabel}
-            </Link>
+          <Button
+            size="sm"
+            className="bg-primary text-primary-foreground hover:opacity-90"
+            asChild
+          >
+            <Link to="/careers">View Open Roles</Link>
           </Button>
         </div>
 
         <button
           className="md:hidden p-2 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle navigation"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -58,7 +74,7 @@ const Header = () => {
 
       {mobileOpen && (
         <div className="md:hidden bg-card border-b border-border px-6 py-4 animate-fade-in">
-          {brandConfig.nav.links.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.label}
               to={link.href.startsWith("/#") ? "/" : link.href}
@@ -68,10 +84,12 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Button className="w-full mt-3" size="sm" asChild>
-            <Link to={brandConfig.nav.ctaHref}>
-              {brandConfig.nav.ctaLabel}
-            </Link>
+          <Button
+            className="w-full mt-3 bg-primary text-primary-foreground hover:opacity-90"
+            size="sm"
+            asChild
+          >
+            <Link to="/careers">View Open Roles</Link>
           </Button>
         </div>
       )}

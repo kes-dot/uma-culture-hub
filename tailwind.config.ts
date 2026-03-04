@@ -22,8 +22,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        /* REBRANDING: Change this to your brand font */
-        sans: ["Inter", "sans-serif"],
+        heading: ["Barlow Condensed", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

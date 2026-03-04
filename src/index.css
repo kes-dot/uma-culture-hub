@@ -1,107 +1,92 @@
-/*
- * ============================================================
- * REBRANDING: FONTS
- * ============================================================
- * Replace the Google Fonts import below with your brand's font.
- * Then update the font-family declarations in the @layer base
- * block AND in tailwind.config.ts → theme.extend.fontFamily.
- * ============================================================
- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /*
-   * ============================================================
-   * REBRANDING: COLORS
-   * ============================================================
-   * All colors below are HSL values (without the hsl() wrapper).
-   * Change --primary, --secondary, and --accent to match your
-   * brand palette. The rest will follow automatically.
-   * ============================================================
-   */
   :root {
-    --background: 200 20% 98%;
-    --foreground: 207 50% 12%;
+    --color-primary: #0d3453;
+    --color-secondary: #006aa6;
+    --color-accent: #006aa6;
+    --color-text: #1a1a2e;
+    --color-background: #ffffff;
+
+    --background: 0 0% 100%;
+    --foreground: 237 25% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 207 50% 12%;
+    --card-foreground: 237 25% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 207 50% 12%;
+    --popover-foreground: 237 25% 14%;
 
-    /* PRIMARY: Your main brand color */
-    --primary: 202 100% 37%;
+    --primary: 207 73% 19%;
     --primary-foreground: 0 0% 100%;
 
-    /* SECONDARY: Your accent / CTA color */
-    --secondary: 145 100% 35%;
+    --secondary: 202 100% 33%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 200 20% 95%;
-    --muted-foreground: 207 15% 45%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 145 60% 94%;
-    --accent-foreground: 145 100% 25%;
+    --accent: 202 100% 96%;
+    --accent-foreground: 202 100% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 20% 90%;
-    --input: 200 20% 90%;
-    --ring: 202 100% 37%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 207 73% 19%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 202 100% 37%;
+    --sidebar-primary: 207 73% 19%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 200 20% 95%;
-    --sidebar-accent-foreground: 207 50% 12%;
-    --sidebar-border: 200 20% 90%;
-    --sidebar-ring: 202 100% 37%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 237 25% 14%;
+    --sidebar-border: 214 20% 90%;
+    --sidebar-ring: 207 73% 19%;
 
-    /* Custom tokens — update these to match --primary/--secondary */
-    --gradient-hero: linear-gradient(135deg, hsl(202 100% 37%) 0%, hsl(145 100% 35%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(202 100% 37% / 0.08) 0%, hsl(145 100% 35% / 0.08) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(200 20% 97%) 100%);
-    --shadow-soft: 0 4px 24px -4px hsl(202 100% 37% / 0.12);
-    --shadow-card: 0 2px 16px -2px hsl(207 50% 12% / 0.08);
-    --shadow-elevated: 0 8px 32px -8px hsl(202 100% 37% / 0.18);
+    --gradient-hero: linear-gradient(135deg, hsl(207 73% 19%) 0%, hsl(202 100% 33%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(207 73% 19% / 0.05) 0%, hsl(202 100% 33% / 0.08) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --shadow-soft: 0 4px 24px -4px hsl(207 73% 19% / 0.12);
+    --shadow-card: 0 2px 16px -2px hsl(237 25% 14% / 0.08);
+    --shadow-elevated: 0 8px 32px -8px hsl(207 73% 19% / 0.18);
   }
 
   .dark {
-    --background: 207 50% 6%;
-    --foreground: 200 20% 95%;
-    --card: 207 40% 10%;
-    --card-foreground: 200 20% 95%;
-    --popover: 207 40% 10%;
-    --popover-foreground: 200 20% 95%;
-    --primary: 202 100% 50%;
+    --background: 237 25% 10%;
+    --foreground: 210 20% 95%;
+    --card: 237 23% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 237 23% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 202 100% 40%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 145 80% 40%;
+    --secondary: 207 70% 30%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 207 30% 15%;
-    --muted-foreground: 200 15% 60%;
-    --accent: 145 40% 15%;
-    --accent-foreground: 145 80% 70%;
+    --muted: 237 15% 18%;
+    --muted-foreground: 210 10% 70%;
+    --accent: 237 15% 18%;
+    --accent-foreground: 210 20% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 207 30% 18%;
-    --input: 207 30% 18%;
-    --ring: 202 100% 50%;
-    --sidebar-background: 207 50% 8%;
-    --sidebar-foreground: 200 20% 90%;
-    --sidebar-primary: 202 100% 50%;
+    --border: 237 15% 22%;
+    --input: 237 15% 22%;
+    --ring: 202 100% 40%;
+    --sidebar-background: 237 25% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 202 100% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 207 30% 15%;
-    --sidebar-accent-foreground: 200 20% 90%;
-    --sidebar-border: 207 30% 18%;
-    --sidebar-ring: 202 100% 50%;
+    --sidebar-accent: 237 15% 18%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 237 15% 22%;
+    --sidebar-ring: 202 100% 40%;
   }
 }
 
@@ -111,13 +96,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    /* REBRANDING: Update this to match the Google Fonts import above */
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground font-body;
+    font-family: 'Roboto', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Barlow Condensed', sans-serif;
   }
 }
 
